@@ -1,0 +1,4 @@
+config-path = "src/db/config.ts"
+models-path = "src/db/models"
+migrations-path = "src/db/migrations"
+seeders-path = "src/db/seeders"
