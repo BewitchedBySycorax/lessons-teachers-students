@@ -14,11 +14,11 @@ export class LessonStudent extends Model<InferAttributes<LessonStudent>> {
   // declare studentId: number
 
   @ForeignKey(() => models.Lesson)
-  @Column(DataType.INTEGER)
+  @Column({ field: 'lesson_id', type: DataType.INTEGER })
   declare lessonId: number
 
   @ForeignKey(() => models.Student)
-  @Column(DataType.INTEGER)
+  @Column({ field: 'student_id', type: DataType.INTEGER })
   declare studentId: number
 
   @Default(false)
