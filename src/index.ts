@@ -11,14 +11,14 @@ if (process.env.NODE_ENV !== 'production') {
 	})
 }
 
-const startServer = async () => {
+const startServer = async (): Promise<void> => {
 	try {
-		const PORT = Number(process.env.PORT) || 3000
+		const PORT = Number(process.env.PORT) || 12804
 
 		app.listen(
 			PORT,
 			process.env.NODE_ENV !== 'production' ? '0.0.0.0' : '127.0.0.1',
-			(): void => console.log(`Server started on port ${PORT}`)
+			() => console.log(`Server started on port ${PORT}`)
 		)
 	} catch (e) {
 		console.error(e)
