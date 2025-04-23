@@ -13,7 +13,7 @@ app.get('/lessons', (_req: Request, res: Response): void => {
 
 ;(async (): Promise<void> => {
 	try {
-		await sequelize.sync({ force: true }) // https://sequelize.org/docs/v6/core-concepts/model-basics/#model-synchronization
+		await sequelize.sync() // https://sequelize.org/docs/v6/core-concepts/model-basics/#model-synchronization
     await sequelize.authenticate() // https://sequelize.org/docs/v6/getting-started/#testing-the-connection
     console.log('Connection has been established successfully.')
 	} catch (e) {

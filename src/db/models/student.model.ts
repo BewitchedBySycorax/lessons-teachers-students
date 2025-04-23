@@ -13,7 +13,7 @@ export class Student extends Model<InferAttributes<Student>, InferCreationAttrib
   @Column(DataType.INTEGER)
   declare id: CreationOptional<number>
 
-  @Column(DataType.STRING)
+  @Column(DataType.STRING(10))
   declare name: string
 
   // @BelongsToMany(() => Lesson, () => LessonStudent)

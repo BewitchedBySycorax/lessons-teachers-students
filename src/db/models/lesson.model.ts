@@ -18,7 +18,7 @@ export class Lesson extends Model<InferAttributes<Lesson>, InferCreationAttribut
   @Column(DataType.DATEONLY)
   declare date: string
 
-  @Column(DataType.STRING)
+  @Column(DataType.STRING(100))
   declare title: string
 
   @Default(0)
