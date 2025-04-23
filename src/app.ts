@@ -11,6 +11,10 @@ app.get('/lessons', (_req: Request, res: Response): void => {
   res.status(200).send({ message: `Lessons info here.` })
 })
 
+app.use((_req: Request, res: Response): void => {
+  res.status(404).json({ error: 'Страница не найдена!' })
+})
+
 ;(async (): Promise<void> => {
 	try {
 		await sequelize.sync() // https://sequelize.org/docs/v6/core-concepts/model-basics/#model-synchronization
