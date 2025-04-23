@@ -9,6 +9,9 @@
 # Dotenv environment variable files
 .env*
 !.env.template*
+!.env.project
+!.env.vault
+.flaskenv*
 
 # Transpiled files
 build/
